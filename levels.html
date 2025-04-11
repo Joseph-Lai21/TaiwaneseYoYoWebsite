@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levels - Chinese Yo-Yo Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #feffba;
+            animation: gradientBG 15s infinite alternate;
+            overflow-x: hidden;
+            color: #333;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: left;
+            }
+
+            100% {
+                background-position: right;
+            }
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #222;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #444;
+            transform: translateY(-3px);
+        }
+
+        .navbar a i {
+            margin-right: 8px;
+        }
+
+        /* Level Selection */
+        .level-selection {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .level-selection h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .level-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .level-item {
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .level-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .level-item h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .level-item p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes popUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="submit-video.html"><i class="fas fa-video"></i>Submit Video</a>
+        </div>
+    </div>
+
+    <!-- Level Selection -->
+    <div class="level-selection">
+        <h1>Select Your Level</h1>
+        <div class="level-list">
+            <!-- Level 1 -->
+            <div class="level-item" onclick="window.location.href='level1.html'">
+                <h2>Level 1</h2>
+
+            </div>
+            <!-- Level 2 -->
+            <div class="level-item" onclick="window.location.href='level2.html'">
+                <h2>Level 2</h2>
+
+            </div>
+            <!-- Level 3 -->
+            <div class="level-item" onclick="window.location.href='level3.html'">
+                <h2>Level 3</h2>
+
+            </div>
+            <!-- Level 4 -->
+            <div class="level-item" onclick="window.location.href='level4.html'">
+                <h2>Level 4</h2>
+
+            </div>
+            <!-- Level 5 -->
+            <div class="level-item" onclick="window.location.href='level5.html'">
+                <h2>Level 5</h2>
+
+            </div>
+            <!-- Level 6 -->
+            <div class="level-item" onclick="window.location.href='level6.html'">
+                <h2>Level 6</h2>
+
+            </div>
+            <!-- Level 7 -->
+            <div class="level-item" onclick="window.location.href='level7.html'">
+                <h2>Level 7</h2>
+
+            </div>
+            <!-- Level 8 -->
+            <div class="level-item" onclick="window.location.href='level8.html'">
+                <h2>Level 8</h2>
+
+            </div>
+            <!-- Level 9 -->
+            <div class="level-item" onclick="window.location.href='level9.html'">
+                <h2>Level 9</h2>
+
+            </div>
+            <!-- Level 10 -->
+            <div class="level-item" onclick="window.location.href='level10.html'">
+                <h2>Level 10</h2>
+            </div>
+             <!-- Extra -->
+             <div class="level-item" onclick="window.location.href='extra.html'">
+                <h2>Extra advanced tricks</h2>
+            
+            </div>
+        </div>
+    </div>
+</body>

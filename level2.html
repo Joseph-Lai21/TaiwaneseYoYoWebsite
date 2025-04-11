@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #feffba;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #333;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .navbar a i {
+            margin-right: 8px;
+        }
+
+        /* Level 2 Content */
+        .level2-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .level2-content h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .section-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-link {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .section-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-link h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-link p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .video-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="levels.html"><i class="fas fa-list"></i>Levels</a>
+            <a href="submit-video.html"><i class="fas fa-video"></i>Submit Video</a>
+        </div>
+    </div>
+
+    <!-- Level 2 Content -->
+    <div class="level2-content">
+        <h1>Level 2</h1>
+        <div class="section-links">
+            <!-- Start from Ground -->
+            <div class="section-link" onclick="showVideo(['Unwrap/HoldUpOne', 'Unwrap/HoldUpTwo'])">
+                <h2>Unwrap/Hold up</h2>
+                <p>Learn how to start the yo-yo from the ground.</p>
+            </div> 
+            
+            <div class="section-link" onclick="showVideo(['TossOne', 'TossTwo'])">
+                <h2>Throw yoyo up</h2>
+                <p>Learn how to throw the yoyo up.</p>
+            </div>
+            <div class="section-link" onclick="showVideo(['StickOne', 'StickTwo'])">
+                <h2>Stick</h2>
+                <p>Learn how to place your yoyo on your stick.</p>
+            </div>
+            <div class="section-link" onclick="showVideo(['FingerOne', 'FingerTwo'])">
+                <h2>Finger</h2>
+                <p>Learn to put the yoyo on your fingers.</p>
+            </div>
+        </div>
+        <!-- Video Containers -->
+        <div id="Unwrap/HoldUpOne" class="video-container">
+            <iframe src="https://youtube.com/embed/jrp2UogKjRg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="Unwrap/HoldUpTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/hbGOocZoBhg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="TossOne" class="video-container">
+            <iframe src="https://youtube.com/embed/tD3oIYfIB4Q" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="TossTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/C1pQQVcshvA" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="StickOne" class="video-container">
+            <iframe src="https://youtube.com/embed/6lTaHn59vY8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="StickTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/bsOp9fcfFV4" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="FingerOne" class="video-container">
+            <iframe src="https://youtube.com/embed/iBUstDqpk-A" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="FingerTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/Hj6IcVX1u3Y" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div> 
+    <script>
+        function showVideo(sectionIds) {
+            // Hide all video containers
+            const videoContainers = document.querySelectorAll('.video-container');
+            videoContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // Show the selected video containers
+            sectionIds.forEach(sectionId => {
+                const selectedVideo = document.getElementById(sectionId);
+                if (selectedVideo) {
+                    selectedVideo.style.display = 'block'; // Show each video
+                }
+            });
+        }
+    </script>
+</body>
+</html>

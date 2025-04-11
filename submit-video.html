@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #feffba;
+            animation: gradientBG 15s infinite alternate;
+            overflow-x: hidden;
+            color: #333;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: left; }
+            100% { background-position: right; }
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #222;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #444;
+            transform: translateY(-3px);
+        }
+
+        .navbar a i {
+            margin-right: 8px;
+        }
+
+        /* Video Submission Form */
+        .content {
+            padding: 40px;
+            text-align: center;
+            background: white;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .video-submission-form input,
+        .video-submission-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .video-submission-form input:focus,
+        .video-submission-form textarea:focus {
+            border-color: #ff9800;
+            outline: none;
+        }
+
+        .video-submission-form button {
+            padding: 14px 30px;
+            background: #ff9800;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+            box-shadow: 0px 5px 15px rgba(255, 152, 0, 0.3);
+        }
+
+        .video-submission-form button:hover {
+            background: #f57c00;
+            box-shadow: 0px 5px 20px rgba(245, 124, 0, 0.5);
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="levels.html"><i class="fas fa-list"></i>Levels</a>
+        </div>
+    </div>
+
+    <!-- Video Submission Form -->
+    <div class="content">
+        <h2>Submit Your Video</h2>
+        <p>Share your progress with us! Submit your name, email, and video link below.</p>
+        <form class="video-submission-form" action="https://formspree.io/f/mjkyjzow" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="url" name="videoLink" placeholder="Video Link (YouTube, Google Drive, etc.)" required>
+            <!-- Hidden fields for better email formatting -->
+            <input type="hidden" name="_subject" value="New Video Submission!">
+            <input type="hidden" name="_replyto" value="%email%">
+            <input type="text" name="_gotcha" style="display:none"> <!-- Anti-spam -->
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.querySelector(".video-submission-form").addEventListener("submit", function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            // Show confirmation message
+            alert("Thank you for your submission! We'll review your video soon.");
+            
+            // Programmatically submit the form after the alert
+            this.submit();
+            
+            // Optional: Reset form after submission
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

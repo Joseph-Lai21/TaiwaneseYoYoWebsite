@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 6</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #feffba;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background: #333;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 0 10px;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .navbar a i {
+            margin-right: 8px;
+        }
+
+        /* Level 6 Content */
+        .level6-content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .level6-content h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .section-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .section-link {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 200px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .section-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-link h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-link p {
+            font-size: 1rem;
+            color: #777;
+        }
+
+        .video-container {
+            display: none;
+            margin-top: 30px;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div>
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+            <a href="levels.html"><i class="fas fa-list"></i>Levels</a>
+            <a href="submit-video.html"><i class="fas fa-video"></i>Submit Video</a>
+        </div>
+    </div>
+
+    <div class="level6-content">
+        <h1>Level 6</h1>
+        <div class="section-links">
+
+            <div class="section-link" onclick="showVideo(['StartWHandOne', 'StartWHandTwo'])">
+                <h2>Start yoyo with hand</h2>
+                <p>Learn how to start the yoyo in a different way.</p>
+            </div>
+
+            <div class="section-link" onclick="showVideo(['upandunderOne', 'upandunderTwo'])">
+                <h2>String under & up then catch</h2>
+                <p>Learn a way to leave different tricks</p>
+            </div>
+
+            <div class="section-link" onclick="showVideo(['Toss360One', 'Toss360Two'])">
+                <h2>Toss + Turn 360</h2>
+                <p>Learn how to toss up and do a 360 turn.</p>
+            </div>
+
+            <div class="section-link" onclick="showVideo(['rainbowOne', 'rainbowTwo'])">
+                <h2>Over head rainbow </h2>
+                <p>Learn how to spin and rainbow the yoyo over your head.</p>
+            </div>
+
+            <div class="section-link" onclick="showVideo(['TossTwoOne', 'TossTwoTwo'])">
+                <h2>Toss 2 yo yos with a partner</h2>
+                <p>Learn to toss/catch a yoyo with someone else simultaneously.</p>
+            </div>
+        </div>
+
+        <!-- Video Containers -->
+        <div id="StartWHandOne" class="video-container">
+            <iframe src="https://youtube.com/embed/SVVvYeM-BYQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="StartWHandTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/F_-Yp0GRJuM" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="upandunderOne" class="video-container">
+            <iframe src="https://youtube.com/embed/B7hcEUGQroo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="upandunderTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/LCr0lAImBvI" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="Toss360One" class="video-container">
+            <iframe src="https://youtube.com/embed/YvnKc-9qUaw" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="Toss360Two" class="video-container">
+            <iframe src="https://youtube.com/embed/M9NstI0p2xo" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="rainbowOne" class="video-container">
+            <iframe src="https://youtube.com/embed/iIq2mi9Phss" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="rainbowTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/kr8FmJ1NdHQ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="TossTwoOne" class="video-container">
+            <iframe src="https://youtube.com/embed/UkYQF0NgRKg" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div id="TossTwoTwo" class="video-container">
+            <iframe src="https://youtube.com/embed/15TnOO3uOcM" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    </div> 
+
+    <script>
+        function showVideo(sectionIds) {
+            // Hide all video containers
+            const videoContainers = document.querySelectorAll('.video-container');
+            videoContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+
+            // Show the selected video containers
+            sectionIds.forEach(sectionId => {
+                const selectedVideo = document.getElementById(sectionId);
+                if (selectedVideo) {
+                    selectedVideo.style.display = 'block'; // Show each video
+                }
+            });
+        }
+    </script>
+</body>
+</html>

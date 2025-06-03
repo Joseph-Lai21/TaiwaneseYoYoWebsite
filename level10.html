@@ -121,7 +121,8 @@
         <div>
             <a href="index.html"><i class="fas fa-home"></i>Home</a>
             <a href="levels.html"><i class="fas fa-list"></i>Levels</a>
-            <a href="submit-video.html"><i class="fas fa-video"></i>Submit Video</a>
+            <a href="whatisdiablo.html"><i class="fas fa-question-circle"></i>What is Diabolo</a>
+
         </div>
     </div>
 
@@ -160,16 +161,27 @@
 
     <script>
         function showVideo(sectionId) {
-        const videoContainers = document.querySelectorAll('.video-container');
-        videoContainers.forEach(container => {
-        container.style.display = 'none';
+    const videoContainers = document.querySelectorAll('.video-container');
+    
+    videoContainers.forEach(container => {
+        const iframe = container.querySelector('iframe');
+        if (iframe) {
+            // Reset the src to stop the video
+            const currentSrc = iframe.src;
+            iframe.src = '';
+            container.style.display = 'none';
+            iframe.src = currentSrc;
+        } else {
+            container.style.display = 'none';
+        }
     });
 
     const selectedVideo = document.getElementById(sectionId);
-      if (selectedVideo) {
-         selectedVideo.style.display = 'block';
-       }
-        }   
+    if (selectedVideo) {
+        selectedVideo.style.display = 'block';
+    }
+}
+
     </script>
 </body>
 </html>

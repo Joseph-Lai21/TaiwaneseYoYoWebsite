@@ -15,4 +15,7 @@ Each level focuses on a specific set of tricks, complete with step-by-step instr
 - Structured **level-based curriculum** (Levels 1–10)  
 - Video tutorials from multiple instructors  
 - Clear and simple web navigation  
-- Bonus pages, including trick submissions and additional resources  
+- Bonus pages, with additonal advanced tricks
+
+You can view and use the full website here:  
+ **[Taiwanese Yo-Yo Website](https://joseph-lai21.github.io/TaiwaneseYoYoWebsite/index.html)**  

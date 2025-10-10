@@ -1,15 +1,13 @@
 # Taiwanese YoYo Website 
 
-This website is an educational platform designed to teach the art of the **Taiwanese yoyo (diabolo/Chinese yoyo)** through a level-based curriculum.  
+This website is an educational platform designed to teach **Taiwanese yoyo (diabolo/Chinese yoyo)** through a level-based curriculum.  
 Learners can progress from beginner to advanced levels using video tutorials from multiple instructors.
 
----
 
 ## Overview
-This website provides a complete set of online learning materials.
+This website has a complete set of online learning materials.
 Each level focuses on a specific set of tricks, complete with step-by-step instructional videos and demonstrations from experienced performers.
 
----
 
 ## Features
 - Structured **level-based curriculum** (Levels 1–10)  
